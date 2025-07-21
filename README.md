@@ -36,6 +36,5 @@ This is a full-stack web application that allows users to upload audio files or 
 ### 🖥️ Clone the Repository
 
 ```bash
-git clone https://github.com/iashutoshyadav/SpeechToText.git
-cd SpeechToText
+https://github.com/iashutoshyadav/SpeechToText.git
 
