@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import VoiceRecorder from '../components/VoiceRecorder';
 
 function UploadPage() {
   const [file, setFile] = useState(null);
@@ -34,36 +35,49 @@ function UploadPage() {
       setLoading(false);
     }
   };
+  const handleRecordingComplete = (audioBlob) => {
+    const recordedFile = new File([audioBlob], 'recording.wav', { type: 'audio/wav' });
+    setFile(recordedFile);
+  };
 
   return (
-    <div class="upload">
+    <div className="upload">
       <h1>Transcribe Audio to Text</h1>
-      <p class="subtitle">
+      <p className="subtitle">
         Transcribe speech and voice recordings to text in no time. Free AI audio-to-text converter.
       </p>
 
-      <div class="upload-box">
+      <div className="upload-box">
         <h2>Upload your file</h2>
         <p>Click Choose File button to get started or drag and drop files to upload.</p>
 
-        <label htmlFor="file-upload" class="custom-file-upload">
-          Choose File
-        </label>
-        <input
-          id="file-upload"
-          type="file"
-          accept="audio/*"
-          onChange={handleFileChange}
-          style={{ display: 'none' }}
-        />
-        
+        <div className="file-recorder-container">
+          <div className="choose-file">
+            <label htmlFor="file-upload" className="custom-file-upload">
+              Choose File
+            </label>
+            <input
+              id="file-upload"
+              type="file"
+              accept="audio/*"
+              onChange={handleFileChange}
+              style={{ display: 'none' }}
+            />
+          </div>
+
+          <div className="voice-recorder">
+            <VoiceRecorder onRecordingComplete={handleRecordingComplete} />
+          </div>
+        </div>
+
         {file && (
-          <button onClick={handleUpload} class="upload-btn" disabled={loading}>
+          <button onClick={handleUpload} className="upload-btn" disabled={loading}>
             {loading ? "Uploading..." : "Upload"}
           </button>
         )}
       </div>
     </div>
+
   );
 }
 
