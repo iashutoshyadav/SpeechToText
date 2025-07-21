@@ -33,8 +33,19 @@ This is a full-stack web application that allows users to upload audio files or 
 🔗 [GitHub](https://github.com/iashutoshyadav)  
 
 ## 📦 Installation
-### 🖥️ Clone the Repository
 
-```bash
-https://github.com/iashutoshyadav/SpeechToText.git
+# Clone the repo
+git clone https://github.com/iashutoshyadav/SpeechToText.git
+cd SpeechToText
+
+# Setup frontend
+cd frontend
+npm install
+npm run dev
+
+# Setup backend
+cd ../backend
+npm install
+nodemon app.js
+
 
