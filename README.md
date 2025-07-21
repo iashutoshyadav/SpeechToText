@@ -26,6 +26,12 @@ This is a full-stack web application that allows users to upload audio files or 
 - AssemblyAI (speech-to-text)
 - MongoDB or Supabase (for storage)
 
+- 
+## 🙋‍♂️ Author
+
+**Ashutosh Yadav**  
+🔗 [GitHub](https://github.com/iashutoshyadav)  
+
 ## 📦 Installation
 ### 🖥️ Clone the Repository
 
@@ -33,7 +39,3 @@ This is a full-stack web application that allows users to upload audio files or 
 git clone https://github.com/iashutoshyadav/SpeechToText.git
 cd SpeechToText
 
-## 🙋‍♂️ Author
-
-**Ashutosh Yadav**  
-🔗 [GitHub](https://github.com/iashutoshyadav)  
