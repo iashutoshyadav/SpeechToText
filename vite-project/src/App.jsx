@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UploadPage from "./components/UploadPage";
 import ResultPage from "./components/ResultPage";
 
+
 function App() {
   return (
     <Router>

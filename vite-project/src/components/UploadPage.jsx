@@ -7,6 +7,10 @@ function UploadPage() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
   const handleUpload = async () => {
     if (!file) return alert("Please select a file");
 
@@ -32,12 +36,33 @@ function UploadPage() {
   };
 
   return (
-    <div className="upload">
-      <h2>Upload Audio</h2>
-      <input type="file" accept="audio/*" onChange={e => setFile(e.target.files[0])} />
-      <button onClick={handleUpload} disabled={loading}>
-        {loading ? "Uploading..." : "Upload"}
-      </button>
+    <div class="upload">
+      <h1>Transcribe Audio to Text</h1>
+      <p class="subtitle">
+        Transcribe speech and voice recordings to text in no time. Free AI audio-to-text converter.
+      </p>
+
+      <div class="upload-box">
+        <h2>Upload your file</h2>
+        <p>Click Choose File button to get started or drag and drop files to upload.</p>
+
+        <label htmlFor="file-upload" class="custom-file-upload">
+          Choose File
+        </label>
+        <input
+          id="file-upload"
+          type="file"
+          accept="audio/*"
+          onChange={handleFileChange}
+          style={{ display: 'none' }}
+        />
+        
+        {file && (
+          <button onClick={handleUpload} class="upload-btn" disabled={loading}>
+            {loading ? "Uploading..." : "Upload"}
+          </button>
+        )}
+      </div>
     </div>
   );
 }

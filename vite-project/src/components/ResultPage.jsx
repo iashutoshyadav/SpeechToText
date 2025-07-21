@@ -8,14 +8,19 @@ const Result = () => {
   const { transcription } = location.state || {};
 
   return (
-    <div className="result-page">
-      <h2>Transcription Result</h2>
-      <h4>Converted Audio to Text:</h4>
-      <p style={{ color: transcription === "Transcription failed" ? "red" : "black" }}>
-        {transcription || "No result available"}
-      </p>
-      <button onClick={() => navigate('/')}>Transcribe Another</button>
+    <div class="result-page">
+      <div class="result-box">
+        <h2>Transcription Result</h2>
+        <h4>Converted Audio to Text:</h4>
+        <div class="scroll">
+          <p style={{ color: transcription === "Transcription failed" ? "red" : "black" }}>
+            {transcription || "No result available"}
+          </p>
+        </div>
+        <button onClick={() => navigate('/')}>Transcribe Another</button>
+      </div>
     </div>
+
   );
 };
 
