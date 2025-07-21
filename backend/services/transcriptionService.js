@@ -45,7 +45,7 @@ const transcribeWithAssemblyAI = async (filePath) => {
       throw new Error('Transcription failed: ' + pollingRes.data.error);
     }
 
-    await new Promise(res => setTimeout(res, 3000)); // wait 3 seconds before next poll
+    await new Promise(res => setTimeout(res, 3000)); 
   }
 
   return transcription;

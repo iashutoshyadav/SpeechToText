@@ -6,22 +6,21 @@ const transcribeAudio = require('../services/transcriptionService');
 
 // UPLOAD AUDIO FILE + TRANSCRIBE
 router.post('/upload', upload.single('audio'), async (req, res) => {
-  // ✅ Debug logs
+
   console.log("REQ FILE:", req.file);
   console.log("REQ BODY:", req.body);
 
-  // ❌ Don't send response before processing
+
   if (!req.file) return res.status(400).json({ error: 'No file uploaded' });
 
   try {
-    // ✅ Call the service with correct arguments
     const transcription = await transcribeAudio(
       req.file.path,
       req.body.service || 'openai',
       req.body.language || 'en'
     );
 
-    // ✅ Save to DB
+    // Save to DB
     const saved = await Transcription.create({
       filename: req.file.originalname,
       transcription,
@@ -35,7 +34,6 @@ router.post('/upload', upload.single('audio'), async (req, res) => {
   }
 });
 
-// FETCH ALL TRANSCRIPTIONS
 router.get('/', async (req, res) => {
   try {
     const list = await Transcription.find().sort({ createdAt: -1 });

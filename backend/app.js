@@ -16,9 +16,9 @@ mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
-.then(() => console.log('✅ MongoDB Connected Successfully'))
-.catch((err) => console.error('❌ MongoDB Connection Failed:', err));
+.then(() => console.log(' MongoDB Connected Successfully'))
+.catch((err) => console.error(' MongoDB Connection Failed:', err));
 
 app.use('/api/transcription', transcriptionRoutes);
 
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
