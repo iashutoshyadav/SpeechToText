@@ -24,7 +24,7 @@ This is a full-stack web application that allows users to upload audio files or 
 - Node.js + Express
 - Multer (for file upload)
 - AssemblyAI (speech-to-text)
-- MongoDB or Supabase (for storage)
+- MongoDB  (for storage)
 
 - 
 ## 🙋‍♂️ Author
