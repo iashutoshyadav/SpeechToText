@@ -40,12 +40,16 @@ cd SpeechToText
 
 # Setup frontend
 cd frontend
+
 npm install
+
 npm run dev
 
 # Setup backend
 cd ../backend
+
 npm install
+
 nodemon app.js
 
 
