@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: [
     'http://localhost:5173',
-    'https://speech-to-text-v892.vercel.app'
+    'https://speech-to-text-6fho.vercel.app'
   ],
   methods: ['GET', 'POST'],
   credentials: true
@@ -21,6 +21,11 @@ app.use(cors({
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/transcription', transcriptionRoutes);
+
+app.get('/', (req, res) => {
+  res.send('Backend is working!');
+});
+
 
 mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true,
