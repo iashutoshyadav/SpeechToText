@@ -8,6 +8,8 @@ function UploadPage() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:5000/api/transcription";
+
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
@@ -21,13 +23,15 @@ function UploadPage() {
 
     setLoading(true);
     try {
-       const res = await axios.post(`${import.meta.env.VITE_API_BASE_URL}/upload`, formData,
-         {
-    headers: {
-      'Content-Type': 'multipart/form-data',
-    },
-  }
-       );
+      console.log("Uploading to:", `${API_BASE_URL}/upload`);
+      console.log("File:", file);
+
+      const res = await axios.post(`${API_BASE_URL}/upload`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+       
       const transcription = res.data.transcription;
 
       if (transcription) {
