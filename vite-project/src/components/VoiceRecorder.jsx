@@ -30,6 +30,7 @@ const VoiceRecorder = ({ onRecordingComplete }) => {
   return (
     <div class="voice-recorder">
       {/* <h3 class="voice"> Voice Recorder</h3> */}
+      <FontAwesomeIcon icon={byPrefixAndName.fas['microphone']} />
       {!recording ? (
         <button onClick={startRecording} class="start-btn">Start Recording</button>
       ) : (

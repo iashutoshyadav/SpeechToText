@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import VoiceRecorder from '../components/VoiceRecorder';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { byPrefixAndName } from '@fortawesome/free-solid-svg-icons';
 
 function UploadPage() {
   const [file, setFile] = useState(null);
