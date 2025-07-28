@@ -33,7 +33,7 @@ h1 {
 }
 
 .upload-box {
-  background-color: rgba(10, 9, 9, 0.758);
+  background-color: #2e2e2e;
   border-radius: 16px;
   padding: 40px 20px;
   max-width: 600px;
@@ -88,7 +88,7 @@ h1 {
   background-color: #1e40af;
 }
 
-//result page//
+/*result page*/
 .result-page {
   display: flex;
   justify-content: center;
@@ -158,7 +158,7 @@ h1 {
   background: black;
   border-radius: 4px;
 }
-// voice recorder //
+/* voice recorder */
 .voice-recorder {
   font-weight: bold;
   display:flex;
