@@ -34,7 +34,7 @@ function UploadPage() {
           'Content-Type': 'multipart/form-data',
         },
       });
-       
+
       const transcription = res.data.transcription;
 
       if (transcription) {
