@@ -1,4 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone, faStop } from '@fortawesome/free-solid-svg-icons';
+
 
 const VoiceRecorder = ({ onRecordingComplete }) => {
   const [recording, setRecording] = useState(false);
@@ -31,9 +34,12 @@ const VoiceRecorder = ({ onRecordingComplete }) => {
     <div class="voice-recorder">
       {/* <h3 class="voice"> Voice Recorder</h3> */}
       {!recording ? (
-        <button onClick={startRecording} class="start-btn">Start Recording</button>
+        <button onClick={startRecording} class="start-btn">
+          <FontAwesomeIcon icon={faMicrophone} style={{ marginRight: '8px' }} />
+          Start Recording</button>
       ) : (
         <button onClick={stopRecording} class="stop-btn">
+          <FontAwesomeIcon icon={faMicrophone} style={{ marginRight: '8px' }} />
           Stop Recording
         </button>
       )}
