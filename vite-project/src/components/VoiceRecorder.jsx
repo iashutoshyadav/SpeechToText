@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMicrophone, faStop } from '@fortawesome/free-solid-svg-icons';
 
 
 const VoiceRecorder = ({ onRecordingComplete }) => {
