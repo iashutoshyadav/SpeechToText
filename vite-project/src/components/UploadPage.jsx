@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import VoiceRecorder from '../components/VoiceRecorder';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileArrowUp } from '@fortawesome/free-solid-svg-icons';
 
 
 function UploadPage() {
@@ -65,6 +67,7 @@ function UploadPage() {
         <div className="file-recorder-container">
           <div className="choose-file">
             <label htmlFor="file-upload" className="custom-file-upload">
+              <FontAwesomeIcon icon={faFileArrowUp} style={{ marginRight: '8px' }} />
               Choose File
             </label>
             <input
