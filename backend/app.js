@@ -10,7 +10,7 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: [
     'http://localhost:5173',
-    'https://speech-to-text-6fho.vercel.app'
+    'https://speech-to-text-pearl-iota.vercel.app'
   ],
   methods: ['GET', 'POST'],
   credentials: true
