@@ -10,7 +10,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
 }
-
+/* upload page */
 .upload {
   text-align: center;
   padding: 40px;
@@ -236,4 +236,35 @@ h1 {
 
 .social-icons a:hover {
   color: #00bfff;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .upload-box,
+  .result-box {
+    padding: 20px 15px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .upload {
+    padding: 20px 10px;
+  }
+
+  .start-btn, .stop-btn, .upload-btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .file-recorder-container {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
