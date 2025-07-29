@@ -204,27 +204,32 @@ h1 {
 
 /* Footer*/
 .footer {
-  background-color: #1f1f1f;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 10px;
+  background-color: #f9f9f9;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
   margin-top: auto;
   font-family: 'Poppins', sans-serif;
+  height: 50px; 
 }
 
 .footer-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; 
   align-items: center;
+  justify-content: center;
+  gap: 20px; 
 }
 
 .social-icons {
-  margin-top: 10px;
+  display: flex;
+  gap: 15px;
 }
 
 .social-icons a {
-  color: white;
-  margin: 0 10px;
+  color: black;
   font-size: 1.2rem;
   transition: color 0.3s;
 }
